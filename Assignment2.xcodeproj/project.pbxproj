@@ -14,6 +14,7 @@
 		BA68DB0D1F7C2D1C00E9AD09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA68DB0B1F7C2D1C00E9AD09 /* LaunchScreen.storyboard */; };
 		BA68DB181F7C2D1E00E9AD09 /* Assignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA68DB171F7C2D1E00E9AD09 /* Assignment2Tests.swift */; };
 		BA68DB231F7C2D1E00E9AD09 /* Assignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA68DB221F7C2D1E00E9AD09 /* Assignment2UITests.swift */; };
+		BABC6E091F7DDF7200C2D0FA /* LINDSAY Logo-Upper.png in Resources */ = {isa = PBXBuildFile; fileRef = BABC6E081F7DDF7100C2D0FA /* LINDSAY Logo-Upper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BA68DB1E1F7C2D1E00E9AD09 /* Assignment2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA68DB221F7C2D1E00E9AD09 /* Assignment2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2UITests.swift; sourceTree = "<group>"; };
 		BA68DB241F7C2D1E00E9AD09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABC6E081F7DDF7100C2D0FA /* LINDSAY Logo-Upper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LINDSAY Logo-Upper.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		BA68DB011F7C2D1B00E9AD09 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
+				BABC6E081F7DDF7100C2D0FA /* LINDSAY Logo-Upper.png */,
 				BA68DB021F7C2D1B00E9AD09 /* AppDelegate.swift */,
 				BA68DB041F7C2D1C00E9AD09 /* ViewController.swift */,
 				BA68DB061F7C2D1C00E9AD09 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				BA68DB0D1F7C2D1C00E9AD09 /* LaunchScreen.storyboard in Resources */,
 				BA68DB0A1F7C2D1C00E9AD09 /* Assets.xcassets in Resources */,
 				BA68DB081F7C2D1C00E9AD09 /* Main.storyboard in Resources */,
+				BABC6E091F7DDF7200C2D0FA /* LINDSAY Logo-Upper.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
