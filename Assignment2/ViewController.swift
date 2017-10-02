@@ -27,33 +27,52 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var switch2: UISwitch!
     
-    @IBOutlet weak var btnswitch: UIButton!
-    
-    @IBOutlet weak var btnbutton: UIButton!
-    
     
     @IBOutlet weak var btndothing: UIButton!
     
     
+    @IBOutlet weak var segmentcontrol: UISegmentedControl!
+    
+    
+    // When either switch or button is pressed
+    @IBAction func segmentpress(_ sender: Any) {
+        switch segmentcontrol.selectedSegmentIndex{
+        case 0:
+            switch1.isHidden = false
+            switch2.isHidden = false
+            btndothing.isHidden = true
+            switch1.setOn(true, animated: true)
+            switch2.setOn(true, animated: true)
+            switch1.isEnabled = true
+            switch2.isEnabled = true
+            
+        case 1:
+            switch1.isHidden = true
+            switch2.isHidden = true
+            btndothing.isHidden = false
+            
+        default:
+            print("hello")
+        }
+        
+    }
+    
     // left switch is pressed
     @IBAction func press(_ sender: Any) {
-        if (switch2.isEnabled==true){
-            switch2.setOn(false, animated: true)
-            switch1.isEnabled=false
-            switch2.isEnabled=false
-        }
-    }
-    
 
-    @IBAction func press2(_ sender: Any) {
-        if (switch1.isEnabled==true){
-            switch1.setOn(false, animated: true)
-            switch1.isEnabled=false
-            switch2.isEnabled=false
-        }
+        switch2.setOn(!switch1.isOn, animated: true)
+        switch1.setOn(!switch1.isOn, animated: true)
+        
     }
     
+    // When right switch is pressed
+    @IBAction func press2(_ sender: Any) {
+
+        switch1.setOn(!switch2.isOn, animated: true)
+        switch2.setOn(!switch2.isOn, animated: true)
+    }
     
+    // When the slide bar is slided
     
     @IBAction func sliderun(_ sender: Any) {
         let value = Int(slidebar.value*100)
@@ -67,30 +86,7 @@ class ViewController: UIViewController {
     }
     
     
-    // Button swith at the bottom is pressed
-    @IBAction func Switchpress(_ sender: Any) {
-        switch1.isHidden = false
-        switch2.isHidden = false
-        btndothing.isHidden = true
-        switch1.setOn(true, animated: true)
-        switch2.setOn(true, animated: true)
-        switch1.isEnabled = true
-        switch2.isEnabled = true
-        //btnswitch.backgroundColor = UIColor.blue
-        btnswitch.isHighlighted = true
-        
-    }
-    // Button at the bottom is pressed
-    @IBAction func Buttonpress(_ sender: Any) {
-        switch1.isHidden = true
-        switch2.isHidden = true
-        btndothing.isHidden = false
-        //btnbutton.backgroundColor = UIColor.lightGray
-       btnbutton.isHighlighted = true
-        
-        
-        
-    }
+
     
     // Button "Do some thing" is pressed
     @IBAction func dosome(_ sender: Any) {
@@ -107,24 +103,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //btnswitch.backgroundColor(blue)
-        
-        btndothing.isHidden = true
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let donebutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
-        toolbar.setItems([donebutton], animated: false)
-        txtName.inputAccessoryView = toolbar
-    }
-    @objc func doneClicked(){
-        view.endEditing(true)
-    }
-    // Begin to edit name
-    @IBAction func namechange(_ sender: UITextField) {
 
-        //print("hello")
+        // Change from Return button to Dont button
+        txtName.returnKeyType = UIReturnKeyType.done
+        txtName.addTarget(self, action: #selector(enterPressed), for: .editingDidEndOnExit)
+        
+        // Hide the Do nothing button
+        btndothing.isHidden = true
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+        
+
+        
+
     }
+
+    // Function to end text when Done button is pressed
+    @objc func enterPressed(){
+        //do something with typed text if needed
+        txtName.resignFirstResponder()
+    }
+    
+    
+    // Begin to edit name
+//    @IBAction func namechange(_ sender: UITextField) {
+//
+//        //print("hello")
+//    }
     
 
 
@@ -137,11 +142,13 @@ class ViewController: UIViewController {
         }
         else{
           txtviewName.text = ("Hello, \(name!)!")
+            view.endEditing(true)
           txtNumber.becomeFirstResponder()
         }
         
     }
     
+    // For updating number field
     @IBAction func Buttonclick(_ sender: Any) {
         if txtNumber.text == ""{
             txtviewNumber.text=" Number field has been cleared"

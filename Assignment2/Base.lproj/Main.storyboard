@@ -17,11 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LINDSAY Logo-Upper.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxH-Lp-9Ov">
-                                <rect key="frame" x="52" y="12" width="240" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-Gr-TeQ">
                                 <rect key="frame" x="52" y="231" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,7 +38,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="namechange:" destination="BYZ-38-t0r" eventType="editingChanged" id="tTN-GZ-ohf"/>
                                     <action selector="nameeditingdone:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7Ex-lx-EbJ"/>
                                 </connections>
                             </textField>
@@ -89,35 +83,12 @@
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="s_left" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb8-JR-c1Q">
-                                <rect key="frame" x="119" y="560" width="49" height="31"/>
+                                <rect key="frame" x="108" y="588" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="press:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="wgZ-tJ-B1a"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="s_right" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YC-8P-M2N">
-                                <rect key="frame" x="208" y="560" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="press2:" destination="BYZ-38-t0r" eventType="valueChanged" id="DmJ-5R-lrJ"/>
-                                </connections>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btn_switch" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0g-3X-iTu">
-                                <rect key="frame" x="108" y="508" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Switch"/>
-                                <connections>
-                                    <action selector="Switchpress:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vxo-pI-Dmp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btn_button" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyr-ev-ws4">
-                                <rect key="frame" x="193" y="508" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Buttonpress:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="tVR-Jf-ZnF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lblslide" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUo-9p-cvX">
                                 <rect key="frame" x="166" y="404" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,14 +104,39 @@
                                     <action selector="dosome:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Lx2-D6-Eoj"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="s_right" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YC-8P-M2N">
+                                <rect key="frame" x="192" y="588" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="press2:" destination="BYZ-38-t0r" eventType="valueChanged" id="DmJ-5R-lrJ"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LINDSAY Logo-Upper.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxH-Lp-9Ov">
+                                <rect key="frame" x="89" y="20" width="227" height="198"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="L5L-1F-htf"/>
+                                    <constraint firstAttribute="width" constant="200" id="eNW-vn-T9A"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-9Q-2iN">
+                                <rect key="frame" x="117" y="508" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Switch"/>
+                                    <segment title="Button"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentpress:" destination="BYZ-38-t0r" eventType="valueChanged" id="4Ur-C4-qXT"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnbutton" destination="Pyr-ev-ws4" id="76P-st-Dra"/>
                         <outlet property="btndothing" destination="uOp-Rh-6As" id="HGH-17-uNJ"/>
-                        <outlet property="btnswitch" destination="l0g-3X-iTu" id="IUJ-r8-qgP"/>
+                        <outlet property="segmentcontrol" destination="AHU-9Q-2iN" id="qEY-KJ-K1z"/>
                         <outlet property="slidebar" destination="ioR-cy-CnD" id="HM9-Jc-rpt"/>
                         <outlet property="switch1" destination="kb8-JR-c1Q" id="cUC-1F-26K"/>
                         <outlet property="switch2" destination="9YC-8P-M2N" id="QTI-7F-Zbf"/>
