@@ -59,7 +59,7 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="txt_out_name" text="No name typed in yet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tde-4z-F1z">
-                                <rect key="frame" x="50" y="340" width="371" height="30"/>
+                                <rect key="frame" x="50" y="340" width="399" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="5RO-f0-Rap"/>
@@ -115,18 +115,20 @@
                                 </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LINDSAY Logo-Upper.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxH-Lp-9Ov">
-                                <rect key="frame" x="95" y="15" width="305" height="180"/>
+                                <rect key="frame" x="95" y="15" width="333" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="731-6X-oER"/>
                                     <constraint firstAttribute="height" constant="180" id="Ctw-k4-w2Z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="QUg-DL-X6i"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="tru-iw-W5J"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vLY-c6-tgP">
-                                <rect key="frame" x="100" y="409" width="291" height="60"/>
+                                <rect key="frame" x="100" y="409" width="319" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblslide" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUo-9p-cvX">
-                                        <rect key="frame" x="70" y="0.0" width="151" height="30"/>
+                                        <rect key="frame" x="149.5" y="0.0" width="20.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kc6-Wo-sBO"/>
                                         </constraints>
@@ -135,7 +137,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="slide" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-cy-CnD">
-                                        <rect key="frame" x="-2" y="30" width="295" height="31"/>
+                                        <rect key="frame" x="-2" y="30" width="323" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="sfm-9t-Tyg"/>
                                         </constraints>
@@ -145,7 +147,8 @@
                                     </slider>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qUo-9p-cvX" firstAttribute="leading" secondItem="vLY-c6-tgP" secondAttribute="leading" constant="70" id="H4z-XX-P32"/>
+                                    <constraint firstItem="qUo-9p-cvX" firstAttribute="leading" secondItem="vLY-c6-tgP" secondAttribute="leading" constant="100" id="H4z-XX-P32"/>
+                                    <constraint firstItem="qUo-9p-cvX" firstAttribute="centerX" secondItem="ioR-cy-CnD" secondAttribute="centerX" id="JiN-xG-TCM"/>
                                     <constraint firstItem="ioR-cy-CnD" firstAttribute="leading" secondItem="vLY-c6-tgP" secondAttribute="leading" id="rkj-rH-OAY"/>
                                 </constraints>
                             </stackView>
@@ -162,7 +165,7 @@
                                 </connections>
                             </switch>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-Up-8L6">
-                                <rect key="frame" x="16" y="239" width="300" height="30"/>
+                                <rect key="frame" x="16" y="239" width="328" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-Gr-TeQ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -171,7 +174,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="txt_in_name" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j0Y-Qm-To4">
-                                        <rect key="frame" x="50" y="0.0" width="250" height="30"/>
+                                        <rect key="frame" x="50" y="0.0" width="278" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2LB-kJ-bJ6"/>
                                         </constraints>
